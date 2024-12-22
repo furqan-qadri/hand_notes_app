@@ -1,0 +1,110 @@
+### React Revision Topics
+
+#### **1. Components**
+1. **Functional Components**: Basics of functional components and their syntax.
+2. **Class Components**: When to use class components and lifecycle methods.
+3. **Component Props**: Passing, destructuring, and default props.
+4. **Children Props**: How to use `props.children` for flexible component design.
+5. **Conditional Rendering**: Techniques using `if`, ternary, or logical operators.
+6. **Dynamic Components**: Creating components dynamically from arrays or data.
+7. **Higher-Order Components (HOCs)**: Reusable component patterns using HOCs.
+8. **Render Props Pattern**: Sharing state and logic between components.
+9. **Error Boundaries**: Handling runtime errors in components.
+10. **Lazy Loading Components**: Dynamically load components using `React.lazy`.
+
+#### **2. Hooks**
+1. **useState**: Managing state and its common patterns.
+2. **useEffect**: Side effects, cleanup, and dependency arrays.
+3. **useContext**: Sharing global state without prop drilling.
+4. **useReducer**: Managing complex state logic.
+5. **useRef**: Accessing DOM elements and maintaining mutable references.
+6. **useMemo**: Memoizing expensive computations for performance optimization.
+7. **useCallback**: Memoizing callback functions to prevent unnecessary re-renders.
+8. **Custom Hooks**: Creating reusable hooks for shared logic.
+9. **useLayoutEffect**: Understanding the difference between `useEffect` and `useLayoutEffect`.
+10. **Third-Party Hooks**: Useful hooks from libraries like `react-use` or `ahooks`.
+
+#### **3. Rendering**
+1. **Virtual DOM**: How React's Virtual DOM works under the hood.
+2. **Reconciliation**: Understanding React's diffing algorithm.
+3. **React.memo**: Preventing unnecessary re-renders of functional components.
+4. **Key Props in Lists**: Using unique `key` props for dynamic rendering.
+5. **Fragments**: Avoiding unnecessary wrapper elements with `<React.Fragment>`.
+6. **Dynamic Rendering**: Rendering components dynamically based on conditions or data.
+7. **Portals**: Rendering children into a different DOM subtree.
+8. **Server-Side Rendering (SSR)**: Using frameworks like Next.js for SSR.
+9. **Static Site Generation (SSG)**: Pre-rendering pages for performance.
+10. **Concurrent Rendering**: React 18 features like automatic batching and `startTransition`.
+
+#### **4. Routers**
+1. **React Router Basics**: Setting up `react-router-dom`.
+2. **Routes and Route Components**: Understanding `Route` and `Switch`/`Routes`.
+3. **Dynamic Routing**: Creating routes with URL parameters.
+4. **Nested Routes**: Structuring nested route hierarchies.
+5. **Redirects**: Using `Navigate` to redirect users.
+6. **Route Guards**: Protecting routes with authentication logic.
+7. **Link and NavLink**: Navigating between pages with `Link` and `NavLink`.
+8. **useNavigate Hook**: Programmatically navigating within the app.
+9. **Query Parameters**: Parsing and handling query strings in routes.
+10. **Code Splitting**: Lazy loading routes with `React.lazy` and `Suspense`.
+
+#### **5. State Management**
+1. **useState vs. useReducer**: When to use each for managing state.
+2. **Context API**: Global state management without third-party libraries.
+3. **React Query**: Managing server-side state efficiently.
+4. **Zustand**: Lightweight state management library.
+5. **Redux Basics**: Store, actions, and reducers.
+6. **Redux Toolkit**: Simplified Redux state management.
+7. **Recoil**: Atom and selector patterns for state.
+8. **MobX**: Observables for reactive state management.
+9. **Selector Functions**: Deriving and computing state efficiently.
+10. **Middleware**: Enhancing state logic with tools like Redux Thunk or Saga.
+
+#### **6. API**
+1. **REST API Integration**: Using `fetch` or `axios` for API calls.
+2. **GraphQL**: Fetching data with GraphQL queries and mutations.
+3. **React Query**: Query caching, pagination, and refetching.
+4. **Error Handling**: Graceful handling of API errors.
+5. **Custom Hooks for APIs**: Reusable hooks for fetching and managing API data.
+6. **Optimistic Updates**: Updating the UI before the server confirms changes.
+7. **Polling**: Repeatedly fetching data at intervals.
+8. **WebSockets**: Real-time communication with APIs.
+9. **Authentication**: API token or OAuth integration.
+10. **Pagination and Infinite Scrolling**: Efficiently loading large datasets.
+
+#### **7. CSS**
+1. **CSS Modules**: Scoped styles for components.
+2. **Styled Components**: Using `styled-components` for CSS-in-JS.
+3. **CSS Frameworks**: TailwindCSS, Material-UI, or Bootstrap integration.
+4. **Global Styles**: Applying global styles with CSS or styled-components.
+5. **CSS Variables**: Theme customization with CSS variables.
+6. **Animations**: Animating components with CSS transitions and keyframes.
+7. **Responsive Design**: Media queries and flexbox/grid usage.
+8. **Dynamic Class Names**: Conditional styling with `classnames` or inline logic.
+9. **Dark Mode**: Implementing a dark mode toggle.
+10. **SASS/SCSS**: Advanced CSS preprocessing for better styling.
+
+#### **8. Testing**
+1. **Jest**: Writing unit tests for React components.
+2. **React Testing Library**: Testing user interactions and DOM behavior.
+3. **Mocking API Calls**: Using tools like `msw` or `jest-fetch-mock`.
+4. **Snapshot Testing**: Verifying component UI consistency.
+5. **End-to-End Testing**: Using Cypress or Playwright for full app testing.
+6. **Testing Props**: Verifying prop-based component behavior.
+7. **Testing Hooks**: Unit testing custom hooks.
+8. **Code Coverage**: Measuring and improving test coverage.
+9. **Accessibility Testing**: Verifying ARIA roles and accessibility compliance.
+10. **Performance Testing**: Profiling React apps with tools like Lighthouse.
+
+#### **9. Forms**
+1. **Controlled Components**: Handling form inputs with `useState`.
+2. **Uncontrolled Components**: Using `useRef` for form inputs.
+3. **Validation**: Client-side validation with custom logic or libraries.
+4. **Formik**: Simplified form state management.
+5. **React Hook Form**: Lightweight form library with hooks.
+6. **Dynamic Forms**: Generating forms dynamically based on data.
+7. **File Uploads**: Handling file uploads in forms.
+8. **Multi-Step Forms**: Managing state across multiple steps in a form.
+9. **Debounced Inputs**: Improving performance with debounced user input.
+10. **Submitting Forms**: Handling submission with loading and error states.
+

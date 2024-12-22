@@ -3,19 +3,56 @@ import ResultTextBar from "./components/ResultTextBar.jsx";
 import BookThumbnail from "./components/BookThumbail.jsx";
 import BookPage from "./components/BookPage.jsx";
 import books from "./components/booksdata.jsx"; // Import the books data
+import ApiJokes from "./components/ApiJokes.jsx"; // Import the books data
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredBooks = books.filter((book: { Title: string }) =>
+    book.Title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div
       className="p-16 flex flex-col gap-6 bg-[radial-gradient(60%_120%_at_50%_50%,hsla(0,0%,100%,0)_0,rgba(252,205,238,.5)_100%)]
     "
     >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route path="books" element={<BookPage />} />
+            <Route path="contact" element={<BookPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
       <Navbar />
+      <ApiJokes />
+      <input
+        type="text"
+        className="w-full"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+      />
       <ResultTextBar heading="All books" />
       <div className="grid grid-cols-5 gap-8 w-full overflow-y-auto">
-        {books.map(
+        {filteredBooks.length > 0 ? (
+          filteredBooks.map(
+            (book: { Title: any; Author: any; pdf_link: any }, index: any) => (
+              <BookThumbnail
+                key={index} // Unique key for each child
+                title={book.Title}
+                author={book.Author}
+                link={book.pdf_link}
+              />
+            )
+          )
+        ) : (
+          <div>No books found</div>
+        )}
+        {/* {books.map(
           (book: { Title: any; Author: any; pdf_link: any }, index: any) => (
             <BookThumbnail
               key={index} // Unique key for each child
@@ -24,9 +61,8 @@ function App() {
               link={book.pdf_link}
             />
           )
-        )}
+        )} */}
       </div>
-
       {/* <BookPage /> */}
     </div>
   );
